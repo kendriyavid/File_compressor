@@ -1,83 +1,79 @@
 
 # GoCompress
 
-GoCompress is a simple and efficient file compression tool implemented in Go using Huffman encoding. It allows users to compress and decompress files seamlessly.
+![GoCompress Logo](https://via.placeholder.com/600x200.png?text=GoCompress) <!-- Replace with your logo -->
+
+GoCompress is a powerful CLI tool for file compression built using **Golang** and **Cobra**. It supports multiple compression algorithms, including **Huffman coding** and **Run-Length Encoding (RLE)**, providing efficient and easy-to-use file management for your projects.
+
+## Table of Contents
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+  - [Compressing Files](#compressing-files)
+  - [Decompressing Files](#decompressing-files)
+- [Algorithms](#algorithms)
+  - [Huffman Coding](#huffman-coding)
+  - [Run-Length Encoding (RLE)](#run-length-encoding-rle)
+- [Contributing](#contributing)
+- [License](#license)
 
 ## Features
-
-- **Huffman Encoding**: Utilizes Huffman coding for effective lossless data compression.
-- **File Compression**: Compresses input files into smaller sizes.
-- **File Decompression**: Restores original files from compressed formats.
-- **Tree Structure Storage**: Encodes the Huffman tree structure within the compressed file for accurate decompression.
+- **Multiple Compression Algorithms**: Compress and decompress files using Huffman coding and RLE.
+- **Fast and Efficient**: Leverage the speed and performance of Golang for high-quality compression.
+- **User-Friendly CLI**: Built with Cobra for easy command-line navigation.
 
 ## Installation
 
-To get started with GoCompress, ensure you have Go installed on your machine. You can download it from the [official Go website](https://golang.org/dl/).
+To install GoCompress, follow these steps:
 
 1. Clone the repository:
-
    ```bash
    git clone https://github.com/yourusername/GoCompress.git
    cd GoCompress
    ```
 
-2. Build the project:
-
+2. Build the application:
    ```bash
-   go build -o gocompress
+   go build -o fcompressor
+   ```
+
+3. Run the application:
+   ```bash
+   ./fcompressor
    ```
 
 ## Usage
 
-### Compressing a File
-
+### Compressing Files
 To compress a file, use the following command:
-
 ```bash
-./gocompress compress <input_file> <output_file>
+./fcompressor rle -i input.txt -o output.rle -a compress
 ```
 
-### Decompressing a File
-
-To decompress a file, use the following command:
-
+### Decompressing Files
+To decompress a file, use:
 ```bash
-./gocompress decompress <input_file> <output_file>
+./fcompressor rle -i output.rle -o decompressed.txt -a decompress
 ```
 
-### Example
+## Algorithms
 
-```bash
-# Compressing a file
-./gocompress compress example.txt example.txt.gz
+### Huffman Coding
+Huffman coding is a widely used method for lossless data compression. It uses variable-length codes to represent characters based on their frequencies, allowing more frequent characters to be represented with shorter codes.
 
-# Decompressing a file
-./gocompress decompress example.txt.gz decompressed_example.txt
-```
-
-## How It Works
-
-1. **Build Frequency Table**: Reads the input file and creates a frequency table of the characters.
-2. **Build Huffman Tree**: Constructs a binary tree based on character frequencies.
-3. **Generate Codes**: Assigns binary codes to each character based on their position in the tree.
-4. **Compress**: Writes the Huffman tree and the encoded data to the output file.
-5. **Decompress**: Reads the Huffman tree from the input file and decodes the compressed data.
+### Run-Length Encoding (RLE)
+RLE is a simple compression algorithm that replaces sequences of repeated characters with a single character and its count. For example, the string "AAAABBBCCDAA" becomes "4A3B2C1D2A".
 
 ## Contributing
-
-Contributions are welcome! Please open an issue or submit a pull request.
-
+Contributions are welcome! Please follow these steps:
 1. Fork the repository.
-2. Create a new branch (`git checkout -b feature/YourFeature`).
-3. Make your changes.
-4. Commit your changes (`git commit -m 'Add some feature'`).
-5. Push to the branch (`git push origin feature/YourFeature`).
-6. Open a pull request.
+2. Create a new branch for your feature or bug fix.
+3. Make your changes and commit them.
+4. Push your branch and open a pull request.
 
 ## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+---
 
-## Contact
-
-For any inquiries, feel free to contact me at [your-email@example.com](mailto:your-email@example.com).
+Feel free to reach out if you have any questions or need assistance!
