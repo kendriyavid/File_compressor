@@ -1,7 +1,7 @@
 
 # GoCompress
 
-![GoCompress Logo](https://via.placeholder.com/600x200.png?text=GoCompress) <!-- Replace with your logo -->
+![GoCompress Logo]([https://via.placeholder.com/600x200.png?text=GoCompress](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTch3yANhpX1Zf3quyY9q9LT5gorUSG6e73gQ&s)) <!-- Replace with your logo -->
 
 GoCompress is a powerful CLI tool for file compression built using **Golang** and **Cobra**. It supports multiple compression algorithms, including **Huffman coding** and **Run-Length Encoding (RLE)**, providing efficient and easy-to-use file management for your projects.
 
@@ -71,9 +71,5 @@ Contributions are welcome! Please follow these steps:
 3. Make your changes and commit them.
 4. Push your branch and open a pull request.
 
-## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
 
 Feel free to reach out if you have any questions or need assistance!
